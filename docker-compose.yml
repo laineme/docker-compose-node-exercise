@@ -1,0 +1,27 @@
+version: '3.0'
+
+services:
+  service1-nodejs:
+    build:
+      context: ./service1/
+    image: service1
+    container_name: service1
+    restart: unless-stopped
+    ports:
+    - "8001:8891"
+    environment:
+      - SERVICE=service2
+    networks:
+      - internal
+
+  service2-nodejs:
+    build:
+      context: ./service2/
+    image: service2
+    container_name: service2
+    restart: unless-stopped
+    networks:
+      - internal
+networks:
+  internal:
+    driver: bridge
