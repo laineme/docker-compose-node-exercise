@@ -24,5 +24,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, hostname, () => {
-	console.log(`Service1 is running at http://${hostname}:${port}/`)
+	console.log(`Service1 is running at http://localhost:8001/`)
 })

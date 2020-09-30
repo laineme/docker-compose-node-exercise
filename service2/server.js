@@ -16,5 +16,5 @@ app.get('/', (req, res) => {
 
 // Listens on a port 8002
 app.listen(port, () => {
-  console.log(`Service2 is listening on port ${port}`)
+  //console.log(`Service2 is listening on port ${port}`)
 })
